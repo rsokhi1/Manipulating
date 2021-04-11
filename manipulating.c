@@ -21,14 +21,14 @@ void manipulating(){
     char compare1[80];
     char compare2[80];
     int result;
-    while(TRUE){
+    while(TRUE){ // This make this an infinite loop until a break statement is issued
         printf("Type the 1st string to compare (q - to quit):\n");
-        gets(compare1);
-        if (strcmp(compare1,"q") == 0) break;
+        gets(compare1); // Take input for compare1
+        if (strcmp(compare1,"q") == 0) break; //It will break the loop if 'q' is entered in compare1.
         printf("Type the 2nd string to compare:\n");
-        gets(compare2);
-        result = strcmp(compare1,compare2);
-        if (result > 0)
+        gets(compare2); // Take input for compare2
+        result = strcmp(compare1,compare2); // It compares the string length of compare1 and compare2.
+        if (result < 0) // 
             printf("1st string is less than 2nd\n");
         else if (result == 0)
             printf("1st string is equal to 2nd\n");
