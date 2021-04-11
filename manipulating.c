@@ -27,10 +27,10 @@ void manipulating(){
         if (strcmp(compare1,"q") == 0) break; //It will break the loop if 'q' is entered in compare1.
         printf("Type the 2nd string to compare:\n");
         gets(compare2); // Take input for compare2
-        result = strcmp(compare1,compare2); // It compares the string length of compare1 and compare2.
-        if (result < 0) // 
+        result = strcmp(compare1,compare2); // It compares the string length of compare1 and compare2 and returns the value according to that
+        if (result < 0) // It checks it the return value is negative or not. 
             printf("1st string is less than 2nd\n");
-        else if (result == 0)
+        else if (result == 0) // It checks if the string were of same length.
             printf("1st string is equal to 2nd\n");
         else
             printf("1st string is greater than 2nd\n");
