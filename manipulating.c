@@ -36,4 +36,22 @@ void manipulating(){
             printf("1st string is greater than 2nd\n");
     }
     printf("*** End of Comparing Strings Demo ***\n\n");
+    printf("*** Start of Searching Strings Demo ***\n");
+    char big_string[80];
+    char sub_string[80];
+    char* address;
+    while (TRUE){  // This make this an infinite loop until a break statement is issued
+        printf("Type the big string (q - to quit):\n");
+        gets(big_string); // Take input for big_string
+        if (strcmp(big_string,"q") == 0) break; // Break the leap if q is entered
+        printf("Type the substring:\n");
+        gets(sub_string); // Take input for sub_string
+        address = strstr(big_string, sub_string); // It finds the first occurence of sub_string in the string big_string
+        if (address != NULL) // If the address contains some value this if statement will execute. 
+            printf("Found at %ld position\n", (long)address - (long)big_string);
+            // It converts the address and big_string into long integer type and the subtracts big_string from long.
+        else
+            printf("Not found\n");
+    }
+    printf("*** End of Searching Strings Demo ***\n\n");
 }
